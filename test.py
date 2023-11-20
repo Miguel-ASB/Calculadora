@@ -37,18 +37,9 @@ def test_falla_division_cero(calculadora):
         calculadora.dividir(1, 0)
     assert str(error.value) == 'Esto es un error de division'
 
+
 def test_falla_raiz(calculadora):
     with pytest.raises(Exception) as error:
         calculadora.raiz(-1, 0)
 
-    assert srt(error.value) == 'Error en la raiz'
-
-
-
-
-
-
-
-
-
-
+    assert str(error.value) == 'Error en la raiz'
